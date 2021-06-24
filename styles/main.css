@@ -1,0 +1,3 @@
+body > .container-fluid, body > .container-fluid > .main-content {
+  padding: 0 !important;
+}

@@ -7,6 +7,9 @@
 	<link rel="shortcut icon" href="#" type="image/x-icon">
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<title>Sistema de Boletos</title>
 </head>
 
@@ -15,7 +18,8 @@
 		<!-- nav -->
 		<nav class="navbar navbar-expand-md navbar-light bg-light">
 			<a class="navbar-brand" href="#">
-				<img src="#" alt="logo">
+				<!-- <img class="rounded logo" src="https://picsum.photos/200/100" alt="logo"> -->
+				<img class="rounded logo" src="https://picsum.photos/200/100" alt="logo">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,10 +55,10 @@
 		<!-- ./ -->
 
 		<!-- Content -->
-		<div class="container-fluid mt-4 contenedor-imagen">
+		<div class="container-fluid contenedor-imagen">
 			<div class="imagen">
-				<div class="container">
-					
+				<div class="container shadow shadow-lg">
+
 					<!-- principal tab -->
 					<nav>
 						<div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -69,100 +73,171 @@
 						</div>
 					</nav>
 					<!-- ./ -->
-					<div class="container row mt-3">
+					<div class="container row mt-3 mx-auto">
 						<!-- sub tabs -->
 						<!-- <div class="col-8"> -->
 						<div class="col-12 pl-0 pr-0">
 							<div class="tab-content" id="nav-tabContent">
-								<!-- 1 -->
+								<!-- sOperaciones -->
 								<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 									<div class="row">
-										<div class="col-md-3 col-12 border-right border-gray">
+										<div class="col-12 border-right border-gray">
 											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
 												aria-orientation="vertical">
-												<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-													role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-												<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-													role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-												<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-													role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-												<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-													role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+												<a class="nav-link active" id="v-pills-chofer-tab" data-toggle="pill" href="#v-pills-chofer"
+													role="tab" aria-controls="v-pills-chofer" aria-selected="true">Chofer</a>
+												<a class="nav-link" id="v-pills-autobus-tab" data-toggle="pill" href="#v-pills-autobus"
+													role="tab" aria-controls="v-pills-autobus" aria-selected="false">Autobus</a>
+												<a class="nav-link" id="v-pills-expreso-tab" data-toggle="pill" href="#v-pills-expreso"
+													role="tab" aria-controls="v-pills-expreso" aria-selected="false">Expreso</a>
+												<a class="nav-link" id="v-pills-terminal-tab" data-toggle="pill" href="#v-pills-terminal"
+													role="tab" aria-controls="v-pills-terminal" aria-selected="false">Terminal</a>
+												<a class="nav-link" id="v-pills-boleto-tab" data-toggle="pill" href="#v-pills-boleto" role="tab"
+													aria-controls="v-pills-boleto" aria-selected="false">Boleto</a>
 											</div>
 										</div>
-										<div class="col-md-9 col-12">
+										<div class="col-12">
 											<div class="tab-content" id="v-pills-tabContent">
-												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-													aria-labelledby="v-pills-home-tab">...</div>
-												<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-													aria-labelledby="v-pills-profile-tab">
-													...</div>
-												<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-													aria-labelledby="v-pills-messages-tab">...</div>
-												<div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-													aria-labelledby="v-pills-settings-tab">...</div>
+												<div class="tab-pane fade show active" id="v-pills-chofer" role="tabpanel"
+													aria-labelledby="v-pills-chofer-tab">
+													<!-- Formulario operaciones - Chofer -->
+													<form action="#" class="needs-validation" novalidate>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-sm-6">
+																	<label for="name">Nombre(s)</label>
+																	<input type="text" id="name" class="form-control" required>
+																	<div class="valid-feedback"></div>
+																</div>
+																<div class="col-12 col-sm-6">
+																	<label for="lastName">Apellidos</label>
+																	<input type="text" id="lastName" class="form-control" required>
+																	<div class="valid-feedback"></div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-auto">
+																	<label>Sexo: </label>
+																</div>
+																<div class="col">
+																	<div class="form-check form-check-inline">
+																		<input type="radio" class="form-check-input" id="radio1" name="genre" required checked>
+																		<label for="radio1" class="form-check-label">masculino</label>
+																	</div>
+																	<div class="form-check form-check-inline">
+																		<input type="radio" class="form-check-input" id="radio2" name="genre">
+																		<label for="radio2" class="form-check-label">femenino</label>
+																	</div>
+																	<div class="form-check form-check-inline">
+																		<input type="radio" class="form-check-input" id="radio3" name="genre">
+																		<label for="radio3" class="form-check-label">otro</label>
+																	</div>
+																	<div class="valid-feedback"></div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-xs-12 col-sm-auto">
+																	<label for="op-chof-edad">Edad: </label>
+																	<select class="custom-select" name="op-chof-edad" id="op-chof-edad" required></select>
+																</div>
+																<div class="col-xs-12 col-sm">
+																	<label for="op-chof-number">Numero de celular: </label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">+51</div>
+																		</div>
+																		<input class="form-control" type="number" name="op-chof-number" id="op-chof-number" required>
+																	</div>
+																</div>
+															</div>
+															<script>
+																const $op_chof_edad = $("#op-chof-edad")
+																for (let i = 18; i <= 80; i++) {
+																	let nodo = `<option value="${i}">${i}</option>`
+																	$op_chof_edad.append(nodo)
+																}
+															</script>
+														</div>
+														<div class="form-group">
+															<div class="form-row justify-content-between">
+																<button type="submit" class="btn btn-danger btn-sm">Restablecer</button>
+																<button class="btn btn-success btn-sm">Siguiente</button>
+															</div>
+														</div>
+													</form>
+												</div>
+												<div class="tab-pane fade" id="v-pills-autobus" role="tabpanel"
+													aria-labelledby="v-pills-autobus-tab">
+												</div>
+												<div class="tab-pane fade" id="v-pills-expreso" role="tabpanel"
+													aria-labelledby="v-pills-expreso-tab">...</div>
+												<div class="tab-pane fade" id="v-pills-terminal" role="tabpanel"
+													aria-labelledby="v-pills-terminal-tab">...</div>
+												<div class="tab-pane fade" id="v-pills-boleto" role="tabpanel"
+													aria-labelledby="v-pills-boleto-tab">...</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- 2 -->
+								<!-- sConsultas -->
 								<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 									<div class="row">
-										<div class="col-3 border-right border-gray">
+										<div class="col-12 border-right border-gray">
 											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
 												aria-orientation="vertical">
-												<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-													role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-												<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-													role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-												<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-													role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-												<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-													role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+												<a class="nav-link active" id="v-pills-cons-chofer-tab" data-toggle="pill"
+													href="#v-pills-cons-chofer" role="tab" aria-controls="v-pills-cons-chofer"
+													aria-selected="true">Chofer</a>
+												<a class="nav-link" id="v-pills-cons-autobus-tab" data-toggle="pill"
+													href="#v-pills-cons-autobus" role="tab" aria-controls="v-pills-cons-autobus"
+													aria-selected="false">Autobus</a>
+												<a class="nav-link" id="v-pills-const-boleto-tab" data-toggle="pill"
+													href="#v-pills-const-boleto" role="tab" aria-controls="v-pills-const-boleto"
+													aria-selected="false">Boleto</a>
+												<a class="nav-link" id="v-pills-const-expreso-tab" data-toggle="pill"
+													href="#v-pills-const-expreso" role="tab" aria-controls="v-pills-const-expreso"
+													aria-selected="false">Expreso</a>
+												<a class="nav-link" id="v-pills-const-pasajeros-tab" data-toggle="pill"
+													href="#v-pills-const-pasajeros" role="tab" aria-controls="v-pills-const-pasajeros"
+													aria-selected="false">Pasajeros</a>
 											</div>
 										</div>
-										<div class="col-9 ">
+										<div class="col-12 ">
 											<div class="tab-content" id="v-pills-tabContent">
-												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-													aria-labelledby="v-pills-home-tab">...</div>
-												<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-													aria-labelledby="v-pills-profile-tab">
+												<div class="tab-pane fade show active" id="v-pills-cons-chofer" role="tabpanel"
+													aria-labelledby="v-pills-cons-chofer-tab">...</div>
+												<div class="tab-pane fade" id="v-pills-cons-autobus" role="tabpanel"
+													aria-labelledby="v-pills-cons-autobus-tab">
 													...</div>
-												<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-													aria-labelledby="v-pills-messages-tab">...</div>
-												<div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-													aria-labelledby="v-pills-settings-tab">...</div>
+												<div class="tab-pane fade" id="v-pills-const-boleto" role="tabpanel"
+													aria-labelledby="v-pills-const-boleto-tab">...</div>
+												<div class="tab-pane fade" id="v-pills-const-expreso" role="tabpanel"
+													aria-labelledby="v-pills-const-expreso-tab">...</div>
+												<div class="tab-pane fade" id="v-pills-const-pasajeros" role="tabpanel"
+													aria-labelledby="v-pills-const-pasajeros-tab">...</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- 3 -->
+								<!-- Devoluciones -->
 								<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 									<div class="row">
-										<div class="col-3 border-right border-gray">
+										<div class="col-12 border-right border-gray">
 											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
 												aria-orientation="vertical">
-												<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-													role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-												<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-													role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-												<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-													role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-												<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-													role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+												<a class="nav-link active" id="v-pills-devo-pasajes-tab" data-toggle="pill"
+													href="#v-pills-devo-pasajes" role="tab" aria-controls="v-pills-devo-pasajes"
+													aria-selected="true">Boleto Pasaje</a>
 											</div>
 										</div>
-										<div class="col-9">
+										<div class="col-12">
 											<div class="tab-content" id="v-pills-tabContent">
-												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-													aria-labelledby="v-pills-home-tab">...</div>
-												<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-													aria-labelledby="v-pills-profile-tab">
-													...</div>
-												<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-													aria-labelledby="v-pills-messages-tab">...</div>
-												<div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-													aria-labelledby="v-pills-settings-tab">...</div>
+												<div class="tab-pane fade show active" id="v-pills-devo-pasajes" role="tabpanel"
+													aria-labelledby="v-pills-devo-pasajes-tab">...</div>
 											</div>
 										</div>
 									</div>
@@ -170,7 +245,7 @@
 								<!-- 4 -->
 								<div class="tab-pane fade" id="nav-plus" role="tabpanel" aria-labelledby="nav-plus-tab">
 									<div class="row">
-										<div class="col-3 border-right border-gray">
+										<div class="col-12 border-right border-gray">
 											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
 												aria-orientation="vertical">
 												<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
@@ -183,7 +258,7 @@
 													role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
 											</div>
 										</div>
-										<div class="col-9">
+										<div class="col-12">
 											<div class="tab-content" id="v-pills-tabContent">
 												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
 													aria-labelledby="v-pills-home-tab">...</div>
@@ -217,9 +292,6 @@
 
 		<!-- ./ -->
 	</div>
-	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- ./js/util.js -->
 	<script src="./js/main.js"></script>
 </body>

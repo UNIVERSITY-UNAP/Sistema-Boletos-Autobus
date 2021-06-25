@@ -1,31 +1,58 @@
+.bg-light{
+	background-color: #f0f0f0 !important;
+}
 body {
+	min-width: 250px;
 	box-sizing: border-box;
 	& > .container-fluid {
 		padding: 0 !important;
 		height: 100vh;
-	}
-	.contenedor-imagen {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		// position: relative;
-		z-index: 2;
-		& > .imagen {
-			padding-top: 5em;
-			padding-bottom: 5em;
-			background: url("../img/puno.jpg");
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-			// background-attachment: fixed;
-			height: auto;
-			// position: absolute;
-			z-index: 1;
-			top: 0;
-			> .container {
-				padding: 2em;
-				background-color: #fff;
-				border-radius: .5em;
-				// width: 70%;
+		.navbar {
+			& > .navbar-brand {
+				img.logo {
+					height: 3em;
+					position: relative;
+				}
+			}
+		}
+		.contenedor-imagen {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			// z-index: 2;
+			& > .imagen {
+				padding-top: 10vh;
+				padding-bottom: 10vh;
+				background: url("../img/puno.jpg");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: auto;
+				position: relative;
+				z-index: 1;
+				// &::after {
+				// 	content: "";
+				// 	position: absolute;
+				// 	width: 100%;
+				// 	height: 100%;
+				// 	// background-color: rgba(255, 255, 255, 0.2);
+				// 	top: 0;
+				// 	z-index: 2;
+				// 	filter: blur(20px);
+				// }
+				& > .container {
+					padding: 2em;
+					background-color: #ffffff;
+					border-radius: 0.5em;
+					width: 80%;
+					position: relative;
+					z-index: 4;
+					@media (min-width:0px) and (max-width: 310px) {
+						width: 100%;
+					}
+					@media (min-width:310px) and (max-width: 400px) {
+						width: 90%;
+					}
+				}
 			}
 		}
 	}

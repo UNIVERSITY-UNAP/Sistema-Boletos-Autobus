@@ -1,3 +1,29 @@
-body > .container-fluid, body > .container-fluid > .main-content {
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body > .container-fluid {
   padding: 0 !important;
+  height: 100vh;
+}
+body .contenedor-imagen {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  z-index: 2;
+}
+body .contenedor-imagen > .imagen {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background: url("../img/puno.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  z-index: 1;
+  top: 0;
+}
+body .contenedor-imagen > .imagen > .container {
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 0.5em;
 }

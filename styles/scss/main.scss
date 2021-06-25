@@ -1,8 +1,32 @@
 body {
+	box-sizing: border-box;
 	& > .container-fluid {
-		&,
-		& > .main-content {
-			padding: 0 !important;
+		padding: 0 !important;
+		height: 100vh;
+	}
+	.contenedor-imagen {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		// position: relative;
+		z-index: 2;
+		& > .imagen {
+			padding-top: 5em;
+			padding-bottom: 5em;
+			background: url("../img/puno.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			// background-attachment: fixed;
+			height: auto;
+			// position: absolute;
+			z-index: 1;
+			top: 0;
+			> .container {
+				padding: 2em;
+				background-color: #fff;
+				border-radius: .5em;
+				// width: 70%;
+			}
 		}
 	}
 }

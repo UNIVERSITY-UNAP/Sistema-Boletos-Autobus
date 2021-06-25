@@ -57,6 +57,7 @@
 		<!-- Content -->
 		<div class="container-fluid contenedor-imagen">
 			<div class="imagen">
+				<div class="title h1 text-light text-center"><strong>Bienvenido</strong></div>
 				<div class="container shadow shadow-lg">
 
 					<!-- principal tab -->
@@ -98,16 +99,18 @@
 										</div>
 										<div class="col-12">
 											<div class="tab-content" id="v-pills-tabContent">
+
+												<!-- Formularios operaciones -->
 												<div class="tab-pane fade show active" id="v-pills-chofer" role="tabpanel"
 													aria-labelledby="v-pills-chofer-tab">
-													<!-- Formulario operaciones - Chofer -->
 													<form action="#" class="needs-validation" novalidate>
 														<div class="form-group">
 															<div class="form-row">
 																<div class="col-12 col-sm-6">
 																	<label for="name">Nombre(s)</label>
 																	<input type="text" id="name" class="form-control" required>
-																	<div class="valid-feedback"></div>
+																	<!-- <div class="valid-feedback">Correcto!</div> -->
+																	<!-- <div class="invalid-feedback">Incorrecto!</div> -->
 																</div>
 																<div class="col-12 col-sm-6">
 																	<label for="lastName">Apellidos</label>
@@ -166,8 +169,8 @@
 														</div>
 														<div class="form-group">
 															<div class="d-flex justify-content-between">
-																<button type="submit" class="btn btn-danger btn-sm">Restablecer</button>
-																<button class="btn btn-success btn-sm">Enviar</button>
+																<button type="button" class="btn btn-danger btn-sm">Restablecer</button>
+																<button type="submit" class="btn btn-success btn-sm">Enviar</button>
 															</div>
 														</div>
 													</form>
@@ -207,18 +210,80 @@
 														</div>
 														<div class="form-group">
 															<div class="d-flex justify-content-between">
-																<button type="submit" class="btn btn-danger btn-sm">Restablecer</button>
-																<button class="btn btn-success btn-sm">Enviar</button>
+																<button type="button" class="btn btn-danger btn-sm">Restablecer</button>
+																<button type="submit" class="btn btn-success btn-sm">Enviar</button>
 															</div>
 														</div>
 													</form>
 												</div>
 												<div class="tab-pane fade" id="v-pills-expreso" role="tabpanel"
-													aria-labelledby="v-pills-expreso-tab">...</div>
+													aria-labelledby="v-pills-expreso-tab">
+													<form action="" class="needs-validation" novalidate>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-sm-auto d-flex align-items-end">
+																	<label for="">Destino</label>
+																</div>
+																<div class="col-12 col-sm">
+																	<input type="text" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-sm">
+																	<label for="">Hora de salida</label>
+																	<input type="text" class="form-control" placeholder="hh:mm:ss">
+																</div>
+																<div class="col-12 col-sm">
+																	<label for="">Fecha</label>
+																	<input type="date" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="d-flex justify-content-between">
+																<button type="button" class="btn btn-danger btn-sm">Restablecer</button>
+																<button type="submit" class="btn btn-success btn-sm">Enviar</button>
+															</div>
+														</div>
+													</form>
+												</div>
 												<div class="tab-pane fade" id="v-pills-terminal" role="tabpanel"
-													aria-labelledby="v-pills-terminal-tab">...</div>
+													aria-labelledby="v-pills-terminal-tab">
+													<form action="#" class="needs-validation">
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-md-auto">
+																	<label for="">Direccion del terminal</label>
+																</div>
+																<div class="col-12 col-md">
+																	<input type="text" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-md-auto">
+																	<label for="">Ciudad</label>
+																</div>
+																<div class="col-12 col-md">
+																	<input type="text" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group mb-sm-0">
+															<div class="d-flex justify-content-between">
+																<button type="button" class="btn btn-sm btn-danger">Restablecer</button>
+																<button type="submit" class="btn btn-sm btn-success">Enviar</button>
+															</div>
+														</div>
+													</form>
+												</div>
 												<div class="tab-pane fade" id="v-pills-boleto" role="tabpanel"
-													aria-labelledby="v-pills-boleto-tab">...</div>
+													aria-labelledby="v-pills-boleto-tab">...
+												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -329,7 +394,12 @@
 		<!-- ./ -->
 
 		<!-- Footer -->
-
+		<footer class="text-center bg-light text-muted">
+			<div class="p-3">
+				© 2021 Copyright:
+				<a class="text-reset" href="https://ommstock.webhostapp.com/">ommstock.webhostapp.com</a>
+			</div>
+		</footer>
 		<!-- ./ -->
 	</div>
 	<!-- ./js/util.js -->

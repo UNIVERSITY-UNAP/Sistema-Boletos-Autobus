@@ -69,32 +69,31 @@
 								aria-controls="nav-profile" aria-selected="false">Consultas</a>
 							<a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
 								aria-controls="nav-contact" aria-selected="false">Devoluciones</a>
-							<a class="nav-link" id="nav-plus-tab" data-toggle="tab" href="#nav-plus" role="tab"
-								aria-controls="nav-plus" aria-selected="false">plus</a>
+							<!-- <a class="nav-link" id="nav-plus-tab" data-toggle="tab" href="#nav-plus" role="tab"
+								aria-controls="nav-plus" aria-selected="false">plus</a> -->
 						</div>
 					</nav>
 					<!-- ./ -->
 					<div class="container row mt-3 mx-auto">
-						<!-- sub tabs -->
-						<!-- <div class="col-8"> -->
 						<div class="col-12 pl-0 pr-0">
 							<div class="tab-content" id="nav-tabContent">
 								<!-- sOperaciones -->
 								<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 									<div class="row">
+										<!-- Sub-pills -->
 										<div class="col-12 border-right border-gray">
 											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
 												aria-orientation="vertical">
 												<a class="nav-link active" id="v-pills-chofer-tab" data-toggle="pill" href="#v-pills-chofer"
-													role="tab" aria-controls="v-pills-chofer" aria-selected="true">Chofer</a>
+													role="tab" aria-controls="v-pills-chofer" aria-selected="true">Insertar Chofer</a>
 												<a class="nav-link" id="v-pills-autobus-tab" data-toggle="pill" href="#v-pills-autobus"
-													role="tab" aria-controls="v-pills-autobus" aria-selected="false">Autobus</a>
+													role="tab" aria-controls="v-pills-autobus" aria-selected="false">Insertar Autobus</a>
 												<a class="nav-link" id="v-pills-expreso-tab" data-toggle="pill" href="#v-pills-expreso"
-													role="tab" aria-controls="v-pills-expreso" aria-selected="false">Expreso</a>
+													role="tab" aria-controls="v-pills-expreso" aria-selected="false">Insertar Expreso</a>
 												<a class="nav-link" id="v-pills-terminal-tab" data-toggle="pill" href="#v-pills-terminal"
-													role="tab" aria-controls="v-pills-terminal" aria-selected="false">Terminal</a>
+													role="tab" aria-controls="v-pills-terminal" aria-selected="false">Insertar Terminal</a>
 												<a class="nav-link" id="v-pills-boleto-tab" data-toggle="pill" href="#v-pills-boleto" role="tab"
-													aria-controls="v-pills-boleto" aria-selected="false">Boleto</a>
+													aria-controls="v-pills-boleto" aria-selected="false">Generar Boleto</a>
 											</div>
 										</div>
 										<div class="col-12">
@@ -146,7 +145,9 @@
 															<div class="form-row">
 																<div class="col-xs-12 col-sm-auto">
 																	<label for="op-chof-edad">Edad: </label>
-																	<select class="custom-select" name="op-chof-edad" id="op-chof-edad" required></select>
+																	<select class="custom-select" name="op-chof-edad" id="op-chof-edad" required>
+																		<!-- <option class="text-muted" disabled selected>Elija</option> -->
+																	</select>
 																</div>
 																<div class="col-xs-12 col-sm">
 																	<label for="op-chof-number">Numero de celular: </label>
@@ -216,8 +217,7 @@
 														</div>
 													</form>
 												</div>
-												<div class="tab-pane fade" id="v-pills-expreso" role="tabpanel"
-													aria-labelledby="v-pills-expreso-tab">
+												<div class="tab-pane fade" id="v-pills-expreso" role="tabpanel" aria-labelledby="v-pills-expreso-tab">
 													<form action="" class="needs-validation" novalidate>
 														<div class="form-group">
 															<div class="form-row">
@@ -280,10 +280,131 @@
 														</div>
 													</form>
 												</div>
-												<div class="tab-pane fade" id="v-pills-boleto" role="tabpanel"
-													aria-labelledby="v-pills-boleto-tab">...
+												<div class="tab-pane fade" id="v-pills-boleto" role="tabpanel" aria-labelledby="v-pills-boleto-tab">
+													<form action="#" class="needs-validation" novalidate>
+														<!-- Arriba-->
+														<div class="form-row">
+															<!-- Izquierda -->
+															<div class="col-12 col-md">
+																<!-- 1er input -->
+																<div class="form-group">
+																	<div class="form-row">
+																		<div class="col-12 col-md-auto">
+																			<label for="">Hora de Salida</label>
+																		</div>
+																		<div class="col-12 col-md">
+																			<input type="text" class="form-control" placeholder="hh:mm">
+																		</div>
+																	</div>
+																</div>
+																<!-- Card -->
+																<div class="form-group">
+																	<div class="card">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<!-- <div class="form-row"> -->
+																				<!-- <div class="col-12"> -->
+																				<label for="">Terminal Salida</label>
+																				<!-- </div> -->
+																				<!-- <div class="col-12"> -->
+																				<select name="" id="" class="custom-select"></select>
+																				<!-- <input type="text" class="form-control"> -->
+																				<!-- </div> -->
+																				<!-- </div> -->
+																			</div>
+																			<div class="form-group">
+																				<div class="form-row">
+																					<div class="col-12 col-md-auto">
+																						<label for="">Fecha Salida</label>
+																					</div>
+																					<div class="col-12 col-md">
+																						<input type="date" class="form-control">
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- Derecha -->
+															<div class="col-12 col-md">
+																<!-- 1er input -->
+																<div class="form-group">
+																	<div class="form-row">
+																		<div class="col-12 col-md-auto">
+																			<label for="">Tiempo Recorrido</label>
+																		</div>
+																		<div class="col-12 col-md">
+																			<input type="text" class="form-control" placeholder="hh:mm">
+																		</div>
+																	</div>
+																</div>
+																<!-- Card -->
+																<div class="form-group">
+																	<div class="card">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<!-- <div class="form-row"> -->
+																				<!-- <div class="col-12 col-lg-auto"> -->
+																				<label for="">Terminal Llegada</label>
+																				<!-- </div> -->
+																				<!-- <div class="col-12 col-lg"> -->
+																				<select name="" id="" class="custom-select"></select>
+																				<!-- <input type="text" class="form-control"> -->
+																				<!-- </div> -->
+																				<!-- </div> -->
+																			</div>
+																			<div class="form-group">
+																				<div class="form-row">
+																					<div class="col-12 col-md-auto">
+																						<label for="">Fecha Llegada</label>
+																					</div>
+																					<div class="col-12 col-md">
+																						<input type="date" class="form-control">
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- Medio -->
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-sm">
+																	<div class="form-row">
+																		<div class="col-12 col-md-auto">
+																			<label for="">Autobus</label>
+																		</div>
+																		<div class="col-12 col-md">
+																			<select name="" id="" class="custom-select"></select>
+																			<!-- <input type="text" class="form-control"> -->
+																		</div>
+																	</div>
+																</div>
+																<div class="col-12 col-sm">
+																	<div class="form-row">
+																		<div class="col-12 col-md-auto">
+																			<label for="">Precio</label>
+																		</div>
+																		<div class="col-12 col-md">
+																			<input type="number" class="form-control" step="0.01" placeholder="0.00" min="0.00">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- Abajo -->
+														<div class="form-group mb-sm-0">
+															<div class="d-flex justify-content-between">
+																<button type="button" class="btn btn-sm btn-danger">Restablecer</button>
+																<button type="submit" class="btn btn-sm btn-success">Enviar</button>
+															</div>
+														</div>
+													</form>
 												</div>
-												
+
 											</div>
 										</div>
 									</div>
@@ -296,10 +417,10 @@
 												aria-orientation="vertical">
 												<a class="nav-link active" id="v-pills-cons-chofer-tab" data-toggle="pill"
 													href="#v-pills-cons-chofer" role="tab" aria-controls="v-pills-cons-chofer"
-													aria-selected="true">Chofer</a>
+													aria-selected="true">Insertar Chofer</a>
 												<a class="nav-link" id="v-pills-cons-autobus-tab" data-toggle="pill"
 													href="#v-pills-cons-autobus" role="tab" aria-controls="v-pills-cons-autobus"
-													aria-selected="false">Autobus</a>
+													aria-selected="false">Insertar Autobus</a>
 												<a class="nav-link" id="v-pills-const-boleto-tab" data-toggle="pill"
 													href="#v-pills-const-boleto" role="tab" aria-controls="v-pills-const-boleto"
 													aria-selected="false">Boleto</a>
@@ -348,7 +469,7 @@
 									</div>
 								</div>
 								<!-- 4 -->
-								<div class="tab-pane fade" id="nav-plus" role="tabpanel" aria-labelledby="nav-plus-tab">
+								<!-- <div class="tab-pane fade" id="nav-plus" role="tabpanel" aria-labelledby="nav-plus-tab">
 									<div class="row">
 										<div class="col-12 border-right border-gray">
 											<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
@@ -377,7 +498,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<!-- ./ -->

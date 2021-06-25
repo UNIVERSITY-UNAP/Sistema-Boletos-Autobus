@@ -16,7 +16,7 @@
 <body>
 	<div class="container-fluid">
 		<!-- nav -->
-		<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom">
 			<a class="navbar-brand" href="#">
 				<!-- <img class="rounded logo" src="https://picsum.photos/200/100" alt="logo"> -->
 				<img class="rounded logo" src="https://picsum.photos/200/100" alt="logo">
@@ -123,7 +123,8 @@
 																</div>
 																<div class="col">
 																	<div class="form-check form-check-inline">
-																		<input type="radio" class="form-check-input" id="radio1" name="genre" required checked>
+																		<input type="radio" class="form-check-input" id="radio1" name="genre" required
+																			checked>
 																		<label for="radio1" class="form-check-label">masculino</label>
 																	</div>
 																	<div class="form-check form-check-inline">
@@ -150,7 +151,8 @@
 																		<div class="input-group-prepend">
 																			<div class="input-group-text">+51</div>
 																		</div>
-																		<input class="form-control" type="number" name="op-chof-number" id="op-chof-number" required>
+																		<input class="form-control" type="number" name="op-chof-number" id="op-chof-number"
+																			required>
 																	</div>
 																</div>
 															</div>
@@ -163,15 +165,53 @@
 															</script>
 														</div>
 														<div class="form-group">
-															<div class="form-row justify-content-between">
+															<div class="d-flex justify-content-between">
 																<button type="submit" class="btn btn-danger btn-sm">Restablecer</button>
-																<button class="btn btn-success btn-sm">Siguiente</button>
+																<button class="btn btn-success btn-sm">Enviar</button>
 															</div>
 														</div>
 													</form>
 												</div>
 												<div class="tab-pane fade" id="v-pills-autobus" role="tabpanel"
 													aria-labelledby="v-pills-autobus-tab">
+													<form action="#" class="needs-validation" novalidate>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-sm">
+																	<label for="">Numero de autobus</label>
+																	<input type="text" class="form-control">
+																</div>
+																<div class="col-12 col-sm">
+																	<label for="">Numero de asientos</label>
+																	<input type="number" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-row">
+																<div class="col-12 col-sm">
+																	<label for="">Modelo</label>
+																	<input type="text" class="form-control">
+																</div>
+																<div class="col-12 col-sm">
+																	<label for="">Placas</label>
+																	<input type="text" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<label for="">Chofer</label>
+															<select class="custom-select" name="" id="">
+															</select>
+															<script></script>
+														</div>
+														<div class="form-group">
+															<div class="d-flex justify-content-between">
+																<button type="submit" class="btn btn-danger btn-sm">Restablecer</button>
+																<button class="btn btn-success btn-sm">Enviar</button>
+															</div>
+														</div>
+													</form>
 												</div>
 												<div class="tab-pane fade" id="v-pills-expreso" role="tabpanel"
 													aria-labelledby="v-pills-expreso-tab">...</div>

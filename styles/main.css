@@ -1,7 +1,3 @@
-.bg-light {
-  background-color: #f0f0f0 !important;
-}
-
 body {
   min-width: 250px;
   -webkit-box-sizing: border-box;
@@ -12,7 +8,7 @@ body > .container-fluid {
   height: 100vh;
 }
 body > .container-fluid .navbar > .navbar-brand img.logo {
-  height: 3em;
+  height: 2em;
   position: relative;
 }
 body > .container-fluid .contenedor-imagen {
@@ -22,7 +18,7 @@ body > .container-fluid .contenedor-imagen {
 body > .container-fluid .contenedor-imagen > .imagen {
   padding-top: 10vh;
   padding-bottom: 10vh;
-  background: url("../img/puno.jpg");
+  background: url("../img/img2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

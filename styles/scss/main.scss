@@ -1,5 +1,5 @@
 .bg-light{
-	background-color: #f0f0f0 !important;
+	// background-color: #eee !important;
 }
 body {
 	min-width: 250px;
@@ -10,7 +10,7 @@ body {
 		.navbar {
 			& > .navbar-brand {
 				img.logo {
-					height: 3em;
+					height: 2em;
 					position: relative;
 				}
 			}
@@ -20,9 +20,10 @@ body {
 			padding-right: 0 !important;
 			// z-index: 2;
 			& > .imagen {
+				// height: 70vh;
 				padding-top: 10vh;
 				padding-bottom: 10vh;
-				background: url("../img/puno.jpg");
+				background: url("../img/img2.jpg");
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;

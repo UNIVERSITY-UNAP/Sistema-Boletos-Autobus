@@ -1,0 +1,59 @@
+body {
+  min-width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+}
+body > .container-fluid {
+  padding: 0 !important;
+}
+body > .container-fluid .navbar > .navbar-brand img.logo {
+  height: 2em;
+  position: relative;
+}
+body > .container-fluid .contenedor-imagen {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+body > .container-fluid .contenedor-imagen > .imagen {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background: url("../img/img2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+body > .container-fluid .contenedor-imagen > .imagen > .container {
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  width: 80%;
+  position: relative;
+  z-index: 4;
+}
+@media (min-width: 0px) and (max-width: 310px) {
+  body > .container-fluid .contenedor-imagen > .imagen > .container {
+    width: 100%;
+  }
+}
+@media (min-width: 310px) and (max-width: 400px) {
+  body > .container-fluid .contenedor-imagen > .imagen > .container {
+    width: 90%;
+  }
+}
+body > .container-fluid table thead tr th:first-child {
+  border-radius: 0.5em 0 0 0 !important;
+}
+body > .container-fluid table thead tr th:last-child {
+  border-radius: 0 0.5em 0 0 !important;
+}
+body > .container-fluid table tbody tr:last-child td:last-child {
+  border-radius: 0 0 0.1em 0;
+}
+body > .container-fluid table tbody tr:last-child > th,
+body > .container-fluid table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 0.1em;
+}

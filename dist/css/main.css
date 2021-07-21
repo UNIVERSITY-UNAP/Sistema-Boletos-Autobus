@@ -8,7 +8,7 @@ body > .container-fluid {
   padding: 0 !important;
 }
 body > .container-fluid .navbar > .navbar-brand img.logo {
-  height: 2em;
+  height: 3em;
   position: relative;
 }
 body > .container-fluid .contenedor-imagen {

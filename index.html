@@ -6,11 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="#" type="image/x-icon">
 	<link rel="stylesheet" href="./dist/css/main.css">
-	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/minty/bootstrap.min.css">
 	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="bower_components/select2/dist/js/select2.min.js"></script>
 	<title>Sistema de Boletos</title>
 </head>
 
@@ -20,7 +18,7 @@
 		<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom">
 			<a class="navbar-brand" href="#">
 				<!-- <img class="rounded logo" src="https://picsum.photos/200/100" alt="logo"> -->
-				<img class="rounded logo" src="https://picsum.photos/200/100" alt="logo">
+				<img class="rounded logo" src="./dist/img/bus.png" alt="logo">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,13 +107,13 @@
 															<div class="form-row">
 																<div class="col-12 col-sm-6">
 																	<label for="name">Nombre(s)</label>
-																	<input type="text" id="name" class="form-control" required>
+																	<input type="text" id="name" class="form-control" required placeholder="Omar Miguel">
 																	<!-- <div class="valid-feedback">Correcto!</div> -->
 																	<!-- <div class="invalid-feedback">Incorrecto!</div> -->
 																</div>
 																<div class="col-12 col-sm-6">
 																	<label for="lastName">Apellidos</label>
-																	<input type="text" id="lastName" class="form-control" required>
+																	<input type="text" id="lastName" class="form-control" required placeholder="Mamani Sucari">
 																	<div class="valid-feedback"></div>
 																</div>
 															</div>
@@ -185,11 +183,11 @@
 															<div class="form-row">
 																<div class="col-12 col-sm">
 																	<label for="">Numero de autobus</label>
-																	<input type="text" class="form-control">
+																	<input type="text" class="form-control" placeholder="1">
 																</div>
 																<div class="col-12 col-sm">
 																	<label for="">Numero de asientos</label>
-																	<input type="number" class="form-control">
+																	<input type="number" class="form-control" placeholder="0">
 																</div>
 															</div>
 														</div>
@@ -197,17 +195,18 @@
 															<div class="form-row">
 																<div class="col-12 col-sm">
 																	<label for="">Modelo</label>
-																	<input type="text" class="form-control">
+																	<input type="text" class="form-control" placeholder="H-1 Minibús ">
 																</div>
 																<div class="col-12 col-sm">
 																	<label for="">Placas</label>
-																	<input type="text" class="form-control">
+																	<input type="text" class="form-control" placeholder="HYA123">
 																</div>
 															</div>
 														</div>
 														<div class="form-group">
 															<label for="">Chofer</label>
 															<select class="custom-select" name="" id="">
+																<option selected disabled>Elija</option>
 															</select>
 															<script></script>
 														</div>
@@ -228,7 +227,7 @@
 																	<label for="">Destino</label>
 																</div>
 																<div class="col-12 col-sm">
-																	<input type="text" class="form-control">
+																	<input type="text" class="form-control" placeholder="Av Perez de Cuellar 1020">
 																</div>
 															</div>
 														</div>
@@ -261,7 +260,7 @@
 																	<label for="">Direccion del terminal</label>
 																</div>
 																<div class="col-12 col-md">
-																	<input type="text" class="form-control">
+																	<input type="text" class="form-control" placeholder="Av Perez de Cuellar 1020">
 																</div>
 															</div>
 														</div>
@@ -271,7 +270,7 @@
 																	<label for="">Ciudad</label>
 																</div>
 																<div class="col-12 col-md">
-																	<input type="text" class="form-control">
+																	<input type="text" class="form-control" placeholder="Arequipa">
 																</div>
 															</div>
 														</div>
@@ -307,7 +306,9 @@
 																		<div class="card-body">
 																			<div class="form-group">
 																				<label for="">Terminal Salida</label>
-																				<select name="" id="" class="custom-select"></select>
+																				<select name="" id="" class="custom-select">
+																					<option selected disabled>Elija</option>
+																				</select>
 																			</div>
 																			<div class="form-group">
 																				<div class="form-row">
@@ -346,7 +347,9 @@
 																				<label for="">Terminal Llegada</label>
 																				<!-- </div> -->
 																				<!-- <div class="col-12 col-lg"> -->
-																				<select name="" id="" class="custom-select"></select>
+																				<select name="" id="" class="custom-select">
+																					<option selected disabled>Elija</option>
+																				</select>
 																				<!-- <input type="text" class="form-control"> -->
 																				<!-- </div> -->
 																				<!-- </div> -->
@@ -375,7 +378,9 @@
 																			<label for="">Autobus</label>
 																		</div>
 																		<div class="col-12 col-md">
-																			<select name="" id="" class="custom-select"></select>
+																			<select name="" id="" class="custom-select">
+																				<option selected disabled>Elija</option>
+																			</select>
 																			<!-- <input type="text" class="form-control"> -->
 																		</div>
 																	</div>
@@ -434,18 +439,20 @@
 													aria-labelledby="v-pills-const-boleto-tab">
 													<div class="form-group">
 														<label for="">Buscar</label>
-														<select class="custom-select" name="" id=""></select>
+														<select class="custom-select" name="" id="">
+															<option selected disabled>Elija</option>
+														</select>
 													</div>
 													<div class="table-responsive">
-														<table class="table shadow table-hover table-striped">
-															<thead>
+														<table class="table shadow-sm table-hover table-borderless table-striped">
+															<thead class="thead-light">
 																<tr>
-																	<th>Nº Boleto</th>
-																	<th>Autobus</th>
-																	<th>Chofer</th>
-																	<th>Hora de salida</th>
-																	<th>Lugar Salida</th>
-																	<th>Lugar Llegada</th>
+																	<th class="text-center" scope="col">Nº Boleto</th>
+																	<th class="text-center" scope="col">Autobus</th>
+																	<th class="text-center" scope="col">Chofer</th>
+																	<th class="text-center" scope="col">Hora de salida</th>
+																	<th class="text-center" scope="col">Lugar Salida</th>
+																	<th class="text-center" scope="col">Lugar Llegada</th>
 																</tr>
 															</thead>
 															<tbody>
@@ -554,8 +561,8 @@
 												<div class="tab-pane fade show active" id="v-pills-devo-pasajes" role="tabpanel"
 													aria-labelledby="v-pills-devo-pasajes-tab">
 													<div class="form-group">
-														<label for="">Numero de Boleto</label>
-														<input type="text" class="form-control">
+														<label for="">Número de Boleto</label>
+														<input type="text" class="form-control" placeholder="0001">
 														<!-- <select name="" id="" class="custom-select"></select> -->
 													</div>
 												</div>
